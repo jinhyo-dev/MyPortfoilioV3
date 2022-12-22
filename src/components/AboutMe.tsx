@@ -5,16 +5,16 @@ import styled, { keyframes } from "styled-components";
 import JinhyoImage from '../../public/image/jinhyo.jpg'
 import SchoolSvg from '../../public/svg/school.svg'
 import CodeSvg from '../../public/svg/code.svg'
-import GoLangSvg  from '../../public/svg/golang.svg'
-import ReactSvg  from '../../public/svg/react.svg'
-import PythonSvg  from '../../public/svg/python.svg'
-import JavaSvg  from '../../public/svg/java.svg'
-import Certificate  from '../../public/svg/certificate.svg'
-import Award  from '../../public/svg/award.svg'
+import GoLangSvg from '../../public/svg/golang.svg'
+import ReactSvg from '../../public/svg/react.svg'
+import PythonSvg from '../../public/svg/python.svg'
+import JavaSvg from '../../public/svg/java.svg'
+import Certificate from '../../public/svg/certificate.svg'
+import Award from '../../public/svg/award.svg'
 
 const AboutMe = () => {
   useEffect(() => {
-    AOS.init({duration: 2000})
+    AOS.init({duration: 3000})
   }, [])
 
   return (
@@ -36,24 +36,34 @@ const AboutMe = () => {
           <SkillsContainer>
             <div className={'subheading'}>
               <img src={SchoolSvg} alt={'schoolLogo'} className={'logo'}/>
-              Educations.</div>
+              Educations.
+            </div>
             <Ul>
               <li>경북소프트웨어고등학교 2021.03 ~ Current</li>
             </Ul>
 
             <div className={'subheading'}>
-              <img src={CodeSvg} alt={'codeLogo'} className={'logo'} style={{ width: '1.2rem' }}/>
-              Skills.</div>
+              <img src={CodeSvg} alt={'codeLogo'} className={'logo'} style={{width: '1.2rem'}}/>
+              Skills.
+            </div>
             <Ul>
               <li><ReactLogo src={ReactSvg} alt={'react-logo'} className={'li-logo'}/>React.js</li>
-              <li><img src={GoLangSvg} alt={'go-logo'} className={'li-logo'} style={{ marginRight: '1px' }}/> Golang</li>
-              <li><img src={PythonSvg} alt={'python-logo'} className={'li-logo'} style={{ marginRight: '1px' }}/> Python</li>
-              <li style={{ marginTop: '0.1rem' }}><img src={JavaSvg} alt={'java-logo'} className={'li-logo'} style={{ width: '1.5rem', marginLeft: '-2px', marginBottom: '-5px', marginRight: '2px' }}/>Java</li>
+              <li><img src={GoLangSvg} alt={'go-logo'} className={'li-logo'} style={{marginRight: '1px'}}/> Golang</li>
+              <li><img src={PythonSvg} alt={'python-logo'} className={'li-logo'} style={{marginRight: '1px'}}/> Python
+              </li>
+              <li style={{marginTop: '0.1rem'}}><img src={JavaSvg} alt={'java-logo'} className={'li-logo'} style={{
+                width: '1.5rem',
+                marginLeft: '-2px',
+                marginBottom: '-5px',
+                marginRight: '2px'
+              }}/>Java
+              </li>
             </Ul>
 
             <div className={'subheading'}>
-              <img src={Certificate} alt={'codeLogo'} className={'logo'} style={{ marginBottom: '-6px' }}/>
-              Certificates.</div>
+              <img src={Certificate} alt={'codeLogo'} className={'logo'} style={{marginBottom: '-6px'}}/>
+              Certificates.
+            </div>
             <Ul>
               <li>컴퓨터 활용능력 2급</li>
               <li>정보처리기능사</li>
@@ -62,8 +72,9 @@ const AboutMe = () => {
             </Ul>
 
             <div className={'subheading'}>
-              <img src={Award} alt={'codeLogo'} className={'logo'} style={{ marginBottom: '-5px' }}/>
-              Awards.</div>
+              <img src={Award} alt={'codeLogo'} className={'logo'} style={{marginBottom: '-5px'}}/>
+              Awards.
+            </div>
             <Ul>
               <li>경북 지방기능경기대회 사이버보안분야 장려상 수상</li>
               <li>교내 알고리즘 대회 동상 수상</li>
@@ -85,15 +96,14 @@ const AboutMeContainer = styled.div`
   height: 80vh;
   width: 70%;
   display: table;
-  //background-color: #fff;
 `
 
 const Title = styled.div`
   width: 100%;
   height: 3rem;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #aca7cb;
   font-size: 2rem;
-  color: #fff;
+  color: #aca7cb;
 `
 
 const ImageContainer = styled.div`
@@ -125,7 +135,7 @@ const TextContainer = styled.div`
 const Introduce = styled.div`
   text-align: center;
   font-size: 1.3rem;
-  color: #fff;
+  color: #aca7cb;
 `
 
 const SkillsContainer = styled.div`
@@ -138,15 +148,15 @@ const SkillsContainer = styled.div`
 const Ul = styled.div`
   margin-top: 0.5rem;
   list-style: none;
-  
+
   & li {
     margin-top: 0.3rem;
   }
 `
 
 const rotate = keyframes`
-  100%{
-    transform:rotate(360deg);
+  100% {
+    transform: rotate(360deg);
   }
 `
 
@@ -156,6 +166,5 @@ const ReactLogo = styled.img`
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 `
-
 
 export default AboutMe

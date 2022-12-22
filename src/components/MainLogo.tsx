@@ -65,7 +65,7 @@ const LogoContainer = styled.div`
 
 const PortfolioName = styled.div`
   color: #fff;
-  font-size: 5rem;
+  font-size: 6rem;
   animation: ${fadein} 2s;
 `
 
@@ -74,11 +74,11 @@ const ScrollText = styled.div`
   margin-right: auto;
   width: 9.5rem;
   margin-top: 6rem;
-  color: #fff;
+  color: #8685ef;
   opacity: 0;
   animation-name: ${fadein};
   animation-duration: 2s;
-  animation-delay: 1s;
+  animation-delay: 0.4s;
   animation-fill-mode: forwards;
   font-size: 20px;
 `

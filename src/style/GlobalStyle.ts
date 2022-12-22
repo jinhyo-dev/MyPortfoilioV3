@@ -14,7 +14,8 @@ export const GlobalStyle = createGlobalStyle`
 
   .subheading {
     margin-top: 3vh;
-    border-bottom: 1px solid #b0b0b0;
+    height: 1.5rem;
+    border-bottom: 1px solid #fff;
   }
 
   .logo {
