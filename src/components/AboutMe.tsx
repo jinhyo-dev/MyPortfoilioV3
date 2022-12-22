@@ -96,6 +96,7 @@ const AboutMeContainer = styled.div`
   height: 80vh;
   width: 70%;
   display: table;
+  min-width: 900px;
 `
 
 const Title = styled.div`

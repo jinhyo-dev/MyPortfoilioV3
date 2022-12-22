@@ -7,6 +7,11 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #212121;
   }
 
+  .error {
+    color: #fff;
+    text-align: center;
+  }
+  
   .container {
     height: 100vh;
     width: 100%;
@@ -29,4 +34,45 @@ export const GlobalStyle = createGlobalStyle`
     width: 1.2rem;
     margin-right: 6px;
   }
+  
+  .github-icon {
+    font-size: 3.2rem;
+  }
+
+  .github-icon:hover {
+    color: #5c6bc0;
+    cursor: pointer;
+  }
+  
+  .instagram-icon {
+    font-size: 3.2rem;
+    width: 3.2rem;
+    margin-left: 2rem;
+  }
+  
+  .instagram-icon:hover {
+    cursor: pointer;
+  }
+  
+  .discord-icon {
+    font-size: 3.5rem;
+    margin-left: 2rem;
+  }
+
+  .discord-icon:hover {
+    cursor: pointer;
+    color: #5562ea;
+  }
+  
+  .mail-icon {
+    font-size: 3.5rem;
+    margin-left: 2rem;
+  }
+
+  .mail-icon:hover {
+    cursor: pointer;
+    color: #d43f33;
+  }
+  
+  
 `

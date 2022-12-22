@@ -16,6 +16,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-parallax-tilt": "^1.7.77",
+    "react-responsive": "^9.0.2",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
