@@ -12,7 +12,7 @@ const MainLogo = () => {
         </PortfolioName>
         <ScrollText>
           Scroll Down
-          <Icon><BsChevronDoubleDown style={{marginBottom: '-3px'}}/></Icon>
+          <Icon><BsChevronDoubleDown style={{marginBottom: '-5px'}}/></Icon>
         </ScrollText>
       </LogoContainer>
     </MainPage>
