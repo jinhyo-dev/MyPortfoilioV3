@@ -11,81 +11,91 @@ import PythonSvg from '../../public/svg/python.svg'
 import JavaSvg from '../../public/svg/java.svg'
 import Certificate from '../../public/svg/certificate.svg'
 import Award from '../../public/svg/award.svg'
+import { useMediaQuery } from 'react-responsive';
 
 const AboutMe = () => {
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 900px)'
+  })
+
   useEffect(() => {
     AOS.init({duration: 3000})
   }, [])
 
   return (
-    <div className={'container'}>
-      <AboutMeContainer data-aos={'zoom-in'}>
-        <Title>
-          About me.
-        </Title>
+    isDesktop ? (
+        <div className={'container'}>
+          <AboutMeContainer data-aos={'zoom-in'}>
+            <Title>
+              About me.
+            </Title>
 
-        <ImageContainer>
-          <img src={JinhyoImage} alt={'image'}/>
-        </ImageContainer>
+            <ImageContainer>
+              <img src={JinhyoImage} alt={'image'}/>
+            </ImageContainer>
 
-        <TextContainer>
-          <Introduce>
-            김진효 (Jinhyo Kim) | Frontend & Backend Developer
-          </Introduce>
+            <TextContainer>
+              <Introduce>
+                김진효 (Jinhyo Kim) | Frontend & Backend Developer
+              </Introduce>
 
-          <SkillsContainer>
-            <div className={'subheading'}>
-              <img src={SchoolSvg} alt={'schoolLogo'} className={'logo'}/>
-              Educations.
-            </div>
-            <Ul>
-              <li>경북소프트웨어고등학교 2021.03 ~ Current</li>
-            </Ul>
+              <SkillsContainer>
+                <div className={'subheading'}>
+                  <img src={SchoolSvg} alt={'schoolLogo'} className={'logo'}/>
+                  Educations.
+                </div>
+                <Ul>
+                  <li>경북소프트웨어고등학교 2021.03 ~ Current</li>
+                </Ul>
 
-            <div className={'subheading'}>
-              <img src={CodeSvg} alt={'codeLogo'} className={'logo'} style={{width: '1.2rem'}}/>
-              Skills.
-            </div>
-            <Ul>
-              <li><ReactLogo src={ReactSvg} alt={'react-logo'} className={'li-logo'}/>React.js</li>
-              <li><img src={GoLangSvg} alt={'go-logo'} className={'li-logo'} style={{marginRight: '1px'}}/> Golang</li>
-              <li><img src={PythonSvg} alt={'python-logo'} className={'li-logo'} style={{marginRight: '1px'}}/> Python
-              </li>
-              <li style={{marginTop: '0.1rem'}}><img src={JavaSvg} alt={'java-logo'} className={'li-logo'} style={{
-                width: '1.5rem',
-                marginLeft: '-2px',
-                marginBottom: '-5px',
-                marginRight: '2px'
-              }}/>Java
-              </li>
-            </Ul>
+                <div className={'subheading'}>
+                  <img src={CodeSvg} alt={'codeLogo'} className={'logo'} style={{width: '1.2rem'}}/>
+                  Skills.
+                </div>
+                <Ul>
+                  <li><ReactLogo src={ReactSvg} alt={'react-logo'} className={'li-logo'}/>React.js</li>
+                  <li><img src={GoLangSvg} alt={'go-logo'} className={'li-logo'} style={{marginRight: '1px'}}/> Golang
+                  </li>
+                  <li><img src={PythonSvg} alt={'python-logo'} className={'li-logo'} style={{marginRight: '1px'}}/> Python
+                  </li>
+                  <li style={{marginTop: '0.1rem'}}><img src={JavaSvg} alt={'java-logo'} className={'li-logo'} style={{
+                    width: '1.5rem',
+                    marginLeft: '-2px',
+                    marginBottom: '-5px',
+                    marginRight: '2px'
+                  }}/>Java
+                  </li>
+                </Ul>
 
-            <div className={'subheading'}>
-              <img src={Certificate} alt={'codeLogo'} className={'logo'} style={{marginBottom: '-6px'}}/>
-              Certificates.
-            </div>
-            <Ul>
-              <li>컴퓨터 활용능력 2급</li>
-              <li>정보처리기능사</li>
-              <li>리눅스 마스터 2급</li>
-              <li>네트워크 관리사 2급</li>
-            </Ul>
+                <div className={'subheading'}>
+                  <img src={Certificate} alt={'codeLogo'} className={'logo'} style={{marginBottom: '-6px'}}/>
+                  Certificates.
+                </div>
+                <Ul>
+                  <li>컴퓨터 활용능력 2급</li>
+                  <li>정보처리기능사</li>
+                  <li>리눅스 마스터 2급</li>
+                  <li>네트워크 관리사 2급</li>
+                  <li>정보처리산업기사</li>
+                </Ul>
 
-            <div className={'subheading'}>
-              <img src={Award} alt={'codeLogo'} className={'logo'} style={{marginBottom: '-5px'}}/>
-              Awards.
-            </div>
-            <Ul>
-              <li>경북 지방기능경기대회 사이버보안분야 장려상 수상</li>
-              <li>교내 알고리즘 대회 동상 수상</li>
-            </Ul>
+                <div className={'subheading'}>
+                  <img src={Award} alt={'codeLogo'} className={'logo'} style={{marginBottom: '-5px'}}/>
+                  Awards.
+                </div>
+                <Ul>
+                  <li>경북 지방기능경기대회 사이버보안분야 장려상 수상</li>
+                  <li>교내 알고리즘 대회 동상 수상</li>
+                </Ul>
 
-          </SkillsContainer>
+              </SkillsContainer>
 
-        </TextContainer>
+            </TextContainer>
 
-      </AboutMeContainer>
-    </div>
+          </AboutMeContainer>
+        </div>
+      ) :
+      (<div className={'container'}></div>)
   )
 }
 
@@ -96,15 +106,19 @@ const AboutMeContainer = styled.div`
   height: 80vh;
   width: 70%;
   display: table;
-  min-width: 900px;
 `
 
 const Title = styled.div`
   width: 100%;
   height: 3rem;
-  border-bottom: 1px solid #aca7cb;
+  border-bottom: 1px solid #9e9dff;
   font-size: 2rem;
-  color: #aca7cb;
+  color: #9e9dff;
+  
+  @media screen and (max-width: 1000px) {
+    font-size: 1.5rem;
+    height: 2.4rem;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -115,7 +129,6 @@ const ImageContainer = styled.div`
   float: left;
   border-right: 1px solid #3b3b3b;
   text-align: center;
-  //background-color: #f00;
 
   & img {
     justify-content: center;
@@ -136,7 +149,15 @@ const TextContainer = styled.div`
 const Introduce = styled.div`
   text-align: center;
   font-size: 1.3rem;
-  color: #aca7cb;
+  color: #9e9dff;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 1rem;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    font-size: 0.9rem;
+  }
 `
 
 const SkillsContainer = styled.div`

@@ -4,7 +4,8 @@ export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-    background-color: #212121;
+    background-color: #313131;
+    transition: all 0.35s;
   }
 
   .error {
@@ -21,6 +22,11 @@ export const GlobalStyle = createGlobalStyle`
     margin-top: 3vh;
     height: 1.5rem;
     border-bottom: 1px solid #fff;
+    font-size: 1rem;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 0.8rem;
+    }
   }
 
   .logo {
