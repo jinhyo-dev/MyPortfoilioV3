@@ -13,6 +13,11 @@ export const GlobalStyle = createGlobalStyle`
     text-align: center;
   }
   
+  .project-mobile-container {
+    height: 250vh;
+    width: 100%;
+  }
+  
   .container {
     height: 100vh;
     width: 100%;
@@ -60,42 +65,60 @@ export const GlobalStyle = createGlobalStyle`
   
   .github-icon {
     font-size: 3.2rem;
+    cursor: pointer;
+    
+    &:hover {
+      color: #5c6bc0;
+    }
+    
+    @media screen and (max-width: 900px) {
+      width: 2.2rem;
+    }
   }
 
-  .github-icon:hover {
-    color: #5c6bc0;
-    cursor: pointer;
-  }
   
   .instagram-icon {
     font-size: 3.2rem;
     width: 3.2rem;
     margin-left: 2rem;
-  }
-  
-  .instagram-icon:hover {
     cursor: pointer;
+    
+    &:hover {
+      color: #e1306c;
+    }
+    @media screen and (max-width: 900px) {
+      margin-left: 1.3rem;
+      width: 2.2rem;
+    }
   }
   
   .discord-icon {
     font-size: 3.5rem;
     margin-left: 2rem;
-  }
-
-  .discord-icon:hover {
     cursor: pointer;
-    color: #5562ea;
+    
+    &:hover {
+      color: #5562ea;
+    }
+    
+    @media screen and (max-width: 900px) {
+      margin-left: 1.3rem;
+      width: 2.5rem;
+    }
   }
   
   .mail-icon {
     font-size: 3.5rem;
     margin-left: 2rem;
-  }
-
-  .mail-icon:hover {
     cursor: pointer;
-    color: #d43f33;
+    
+    &:hover {
+      color: #d43f33;  
+    }
+    
+    @media screen and (max-width: 900px) {
+      margin-left: 1.3rem;
+      width: 2.5rem;
+    }
   }
-  
-  
 `

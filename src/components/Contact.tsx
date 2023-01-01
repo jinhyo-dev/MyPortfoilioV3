@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components";
 import { BsInstagram, BsGithub } from 'react-icons/bs'
 import { FaDiscord } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
-import instagram from '../../public/svg/instagram.svg'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 const Contact = () => {
-  const [isMouseHover, setIsMouseHover] = useState<boolean>(false)
 
   useEffect(() => {
     AOS.init({duration: 2000})
@@ -49,16 +47,9 @@ const Contact = () => {
           <BsGithub className={'github-icon'}/>
         </Navigate>
 
-        {
-          isMouseHover ?
-            (
-              <Navigate href={'https://www.instagram.com/jinhyo___/'} target={'_blank'}>
-                <img src={instagram} alt={'instagram'} className={'instagram-icon'}
-                     onMouseLeave={() => setIsMouseHover(false)}/>
-              </Navigate>
-            )
-            : (<BsInstagram className={'instagram-icon'} onMouseOver={() => setIsMouseHover(true)}/>)
-        }
+        <Navigate href={'https://www.instagram.com/jinhyo___/'} target={'_blank'}>
+          <BsInstagram className={'instagram-icon'} />
+        </Navigate>
 
         <FaDiscord className={'discord-icon'} onClick={() => handleCopy('Jinhyo#4116')}/>
 
@@ -76,6 +67,10 @@ const LogoContainer = styled.div`
   width: 21.8rem;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 900px) {
+    width: 13.3rem;
+  }
 `
 
 const Navigate = styled.a`

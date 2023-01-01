@@ -2,7 +2,6 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import Tilt from 'react-parallax-tilt';
 import { BsChevronDoubleDown } from 'react-icons/bs'
-import { useMediaQuery } from "react-responsive";
 
 const MainLogo = () => {
   return (
