@@ -27,18 +27,35 @@ export const GlobalStyle = createGlobalStyle`
     @media screen and (max-width: 1200px) {
       font-size: 0.8rem;
     }
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      margin-top: 2vh;
+    }
   }
 
   .logo {
-    width: 22px;
+    width: 1.4rem;
     margin-bottom: -2px;
     margin-right: 6px;
+
+    @media screen and (max-width: 1200px) {
+      width: 1.2rem;
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: 1rem;
+    }
   }
   
   .li-logo {
     margin-bottom: -3px;
     width: 1.2rem;
     margin-right: 6px;
+
+    @media screen and (max-width: 900px) {
+      width: 1rem;
+    }
   }
   
   .github-icon {
